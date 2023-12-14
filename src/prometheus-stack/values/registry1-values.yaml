@@ -158,7 +158,7 @@ prometheusOperator:
     image:
       registry: registry1.dso.mil
       repository: ironbank/opensource/prometheus-operator/prometheus-config-reloader
-      tag: v0.69.1
+      tag: v0.70.0
     resources:
       limits:
         cpu: 100m
