@@ -102,6 +102,51 @@
       "commitMessageTopic": "promtail"
     },
     {
+      "matchFileNames": ["src/velero/**"],
+      "groupName": "velero",
+      "commitMessageTopic": "velero"
+    },
+    {
+      "matchFileNames": ["src/tempo/**"],
+      "groupName": "tempo",
+      "commitMessageTopic": "tempo"
+    },
+    {
+      "matchFileNames": ["src/prometheus-stack/**"],
+      "groupName": "prometheus-stack",
+      "commitMessageTopic": "prometheus-stack"
+    },
+    {
+      "matchFileNames": ["src/neuvector/**"],
+      "groupName": "neuvector",
+      "commitMessageTopic": "neuvector"
+    },
+    {
+      "matchFileNames": ["src/metrics-server/**"],
+      "groupName": "metrics-server",
+      "commitMessageTopic": "metrics-server"
+    },
+    {
+      "matchFileNames": ["src/loki/**"],
+      "groupName": "loki",
+      "commitMessageTopic": "loki"
+    },
+    {
+      "matchFileNames": ["src/kiali/**"],
+      "groupName": "kiali",
+      "commitMessageTopic": "kiali"
+    },
+    {
+      "matchFileNames": ["src/keycloak/**"],
+      "groupName": "keycloak",
+      "commitMessageTopic": "keycloak"
+    },
+    {
+      "matchFileNames": ["src/grafana/**"],
+      "groupName": "grafana",
+      "commitMessageTopic": "grafana"
+    },
+    {
       "matchPackageNames": ["defenseunicorns/zarf"],
       "groupName": "zarf",
       "commitMessageTopic": "zarf"
