@@ -5,7 +5,6 @@ tag: latest
 pilot:
   image: cgr.dev/chainguard/istio-pilot
 global:
-  # #variant: distroless
   proxy_init:
     # Base name for the proxy_init container, used to configure iptables.
     image: cgr.dev/chainguard/istio-proxy
