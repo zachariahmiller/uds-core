@@ -34,7 +34,7 @@ loki:
   image:
     registry: registry1.dso.mil
     repository: ironbank/opensource/grafana/loki
-    tag: 2.9.2
+    tag: 2.9.3
   podSecurityContext:
     fsGroup: 10001
     runAsGroup: 10001
