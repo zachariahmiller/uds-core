@@ -12,7 +12,7 @@ components:
     charts:
       - name: loki
         url: https://grafana.github.io/helm-charts/
-        version: 5.36.3
+        version: 5.41.2
         namespace: loki
         valuesFiles:
           - ./values/upstream-values.yaml
@@ -32,7 +32,7 @@ components:
     charts:
       - name: loki
         url: https://grafana.github.io/helm-charts/
-        version: 5.36.3
+        version: 5.41.2
         namespace: loki
         valuesFiles:
           - ./values/cng-values.yaml
@@ -52,7 +52,7 @@ components:
     charts:
       - name: loki
         url: https://grafana.github.io/helm-charts/
-        version: 5.36.3
+        version: 5.41.2
         namespace: loki
         valuesFiles:
           - ./values/registry1-values.yaml
