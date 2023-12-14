@@ -25,7 +25,7 @@ components:
       - docker.io/grafana/grafana:10.1.5
       - docker.io/curlimages/curl:7.85.0
       - docker.io/library/busybox:1.31.1
-      - ghcr.io/kiwigrid/k8s-sidecar:1.25.2
+      - ghcr.io/kiwigrid/k8s-sidecar:1.25.3
 
   - name: grafana
     required: true
