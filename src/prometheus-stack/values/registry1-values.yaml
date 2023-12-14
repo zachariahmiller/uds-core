@@ -55,7 +55,7 @@ prometheus:
     image: 
       registry: registry1.dso.mil
       repository: ironbank/opensource/prometheus/prometheus
-      tag: v2.47.2
+      tag: v2.48.1
     podMetadata:
       annotations:
         proxy.istio.io/config: |
