@@ -25,7 +25,7 @@ components:
           - values/upstream-values.yaml
       - name: monitor
         url: https://neuvector.github.io/neuvector-helm/
-        version: 2.6.4
+        version: 2.6.6
         namespace: neuvector
         gitPath: charts/monitor
         valuesFiles:
@@ -62,7 +62,7 @@ components:
           - values/registry1-values.yaml
       - name: monitor
         url: https://neuvector.github.io/neuvector-helm/
-        version: 2.6.4
+        version: 2.6.6
         namespace: neuvector
         gitPath: charts/monitor
         valuesFiles:
