@@ -13,7 +13,7 @@ components:
     charts:
       - name: grafana
         url: https://grafana.github.io/helm-charts/
-        version: 7.0.6
+        version: 7.0.17
         namespace: grafana
         valuesFiles:
           - values/upstream-values.yaml
@@ -35,7 +35,7 @@ components:
     charts:
       - name: grafana
         url: https://grafana.github.io/helm-charts/
-        version: 7.0.6
+        version: 7.0.17
         namespace: grafana
         valuesFiles:
           - values/registry1-values.yaml
@@ -56,7 +56,7 @@ components:
     charts:
       - name: grafana
         url: https://grafana.github.io/helm-charts/
-        version: 7.0.6
+        version: 7.0.17
         namespace: grafana
         valuesFiles:
           - values/cng-values.yaml
