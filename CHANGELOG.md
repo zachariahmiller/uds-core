@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.2](https://github.com/zachariahmiller/uds-core/compare/v0.6.1...v0.6.2) (2023-12-14)
+
+
+### Miscellaneous
+
+* add minio deploy time bundle variable override definitions ([#58](https://github.com/zachariahmiller/uds-core/issues/58)) ([ca28e7b](https://github.com/zachariahmiller/uds-core/commit/ca28e7b4c4a42769934cc8ad69361ff29a348cc5))
+
 ## [0.6.1](https://github.com/defenseunicorns/uds-core/compare/v0.6.0...v0.6.1) (2023-12-07)
 
 
