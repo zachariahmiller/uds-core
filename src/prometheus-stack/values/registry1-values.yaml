@@ -55,7 +55,7 @@ prometheus:
     image: 
       registry: registry1.dso.mil
       repository: ironbank/opensource/prometheus/prometheus
-      tag: v2.47.2
+      tag: v2.48.1
     podMetadata:
       annotations:
         proxy.istio.io/config: |
@@ -103,7 +103,7 @@ prometheus-node-exporter:
   image:
     registry: registry1.dso.mil
     repository: ironbank/opensource/prometheus/node-exporter
-    tag: v1.6.1
+    tag: v1.7.0
   podAnnotations:
     cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
   prometheus:
@@ -151,14 +151,14 @@ prometheusOperator:
   image:
     registry: registry1.dso.mil
     repository: ironbank/opensource/prometheus-operator/prometheus-operator
-    tag: v0.69.1
+    tag: v0.70.0
   prometheusConfigReloader:
     enableProbe:
       false
     image:
       registry: registry1.dso.mil
       repository: ironbank/opensource/prometheus-operator/prometheus-config-reloader
-      tag: v0.69.1
+      tag: v0.70.0
     resources:
       limits:
         cpu: 100m
