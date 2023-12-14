@@ -61,5 +61,5 @@ components:
         version: 0.2.0
         localPath: chart
     images:
-      - registry1.dso.mil/ironbank/opensource/grafana/loki:2.9.2
+      - registry1.dso.mil/ironbank/opensource/grafana/loki:2.9.3
       - registry1.dso.mil/ironbank/opensource/nginx/nginx-alpine:1.25.2
