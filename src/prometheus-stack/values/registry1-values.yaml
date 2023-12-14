@@ -151,7 +151,7 @@ prometheusOperator:
   image:
     registry: registry1.dso.mil
     repository: ironbank/opensource/prometheus-operator/prometheus-operator
-    tag: v0.69.1
+    tag: v0.70.0
   prometheusConfigReloader:
     enableProbe:
       false
