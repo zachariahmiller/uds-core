@@ -44,7 +44,7 @@
         "// renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)"
       ],
       "datasourceTemplate": "github-tags",
-      "versioningTemplate": "{{#if versioning}}v{{{versioning}}}{{else}}vsemver{{/if}}"
+      "versioningTemplate": "{{#if versioning}}{v{{versioning}}}{{else}}vsemver{{/if}}"
     },
     {
       "fileMatch": ["\\.*\\.ya?ml$"],
