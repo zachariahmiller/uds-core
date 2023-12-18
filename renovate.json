@@ -46,6 +46,16 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
+      "depNameTemplate": "defenseunicorns/uds-k3d",
+      "fileMatch": ["\\.*\\.ya?ml$"],
+      "matchStrings": [
+        "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>.*?)\n.*?(?:version:|ref:) (?<currentValue>[^\\s]+)"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
       "fileMatch": ["\\.*\\.ya?ml$"],
       "matchStrings": ["- (?<depName>.*):(?<currentValue>.*)"],
       "datasourceTemplate": "docker"
@@ -172,8 +182,7 @@
     {
       "matchPackageNames": ["defenseunicorns/uds-k3d"],
       "groupName": "uds-k3d",
-      "commitMessageTopic": "uds-k3d",
-      "extractVersionTemplate": "^v(?<version>.*)$"
+      "commitMessageTopic": "uds-k3d"
     },
     { 
       "matchFileNames": [".github/**"],
