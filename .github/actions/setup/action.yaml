@@ -26,5 +26,5 @@ runs:
 
     - name: Install UDS CLI
       shell: bash
-      # renovate: datasource=github-tags depName=defenseunicorns/uds-cli versioning=semver
+      # renovate: datasource=github-tags depName=defenseunicorns/uds-cli versioning=semver-coerced
       run: brew install defenseunicorns/tap/uds@0.4.1
