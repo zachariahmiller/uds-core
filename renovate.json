@@ -26,16 +26,25 @@
   },
   "regexManagers":[
     {
-      "fileMatch": ["\\.*\\.ya?ml$"],
+      "fileMatch": ["\\.*\\.ya?ml$", "^\\.vscode/settings\\.json$"],
       "matchStrings": [
         "# renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*(?<currentValue>.*)\\s",
         "# renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*['\"](?<currentValue>.*)['\"]\\s",
-        "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)",
         "// renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*(?<currentValue>.*)\\s",
         "// renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*['\"](?<currentValue>.*)['\"]\\s"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "datasourceTemplate": "github-tags"
+    },
+    {
+      "name": "uds-cli",
+      "fileMatch": ["^\\.vscode/settings\\.json$"],
+      "matchStrings": [
+        "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)",
+        "// renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)"
+      ],
+      "datasource": "github-tags",
+      "versioningTemplate": "{{#if versioning}}v{{{versioning}}}{{else}}vsemver{{/if}}"
     },
     {
       "fileMatch": ["\\.*\\.ya?ml$"],
