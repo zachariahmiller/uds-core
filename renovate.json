@@ -43,7 +43,7 @@
         "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)",
         "// renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)"
       ],
-      "datasource": "github-tags",
+      "datasourceTemplate": "github-tags",
       "versioningTemplate": "{{#if versioning}}v{{{versioning}}}{{else}}vsemver{{/if}}"
     },
     {
