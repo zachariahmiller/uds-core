@@ -37,7 +37,7 @@
       "datasourceTemplate": "github-tags"
     },
     {
-      "name": "uds-cli",
+      "depNameTemplate": "defenseunicorns/uds-cli",
       "fileMatch": ["\\.*\\.ya?ml$", "^\\.vscode/settings\\.json$"],
       "matchStrings": [
         "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)",
