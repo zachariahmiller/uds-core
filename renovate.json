@@ -28,7 +28,8 @@
     {
       "fileMatch": ["\\.*\\.ya?ml$", "^\\.vscode/settings\\.json$"],
       "matchStrings": [
-        "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>.*?)( extractVersion=(?<extractVersion>.*?))?\n.*?(?:version:|ref:) (?<currentValue>[^\\s]+)"
+        "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>.*?)( extractVersion=(?<extractVersion>.*?))?\n.*?(?:version:|ref:) (?<currentValue>[^\\s]+)",
+        "\/\/ renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>.*?)( extractVersion=(?<extractVersion>.*?))?\n.*?(https:\/\/raw.githubusercontent.com\/defenseunicorns\/uds-cli\/)(?<currentValue>[^\\s]+)\/"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "datasourceTemplate": "github-tags",
@@ -39,7 +40,7 @@
       "fileMatch": ["\\.*\\.ya?ml$", "^\\.vscode/settings\\.json$"],
       "matchStrings": [
         "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)",
-        "// renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)"
+        "\/\/ renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>.*?)( extractVersion=(?<extractVersion>.*?))?\n.*?(https:\/\/raw.githubusercontent.com\/defenseunicorns\/uds-cli\/)(?<currentValue>[^\\s]+)\/"
       ],
       "datasourceTemplate": "github-tags",
       "extractVersionTemplate": "^v(?<version>.*)$"
