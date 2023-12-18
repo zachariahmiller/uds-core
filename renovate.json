@@ -33,7 +33,7 @@
         "// renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*(?<currentValue>.*)\\s",
         "// renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*['\"](?<currentValue>.*)['\"]\\s"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}",
       "datasourceTemplate": "github-tags"
     },
     {
@@ -79,7 +79,16 @@
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "datasourceTemplate": "gitlab-tags"
-    }
+    },
+    {
+      "fileMatch": ["^chart/values\\.yaml$"],
+      "matchStrings": [
+        "registry: registry1.dso.mil\\s+tag:\\s+(?<currentValue>.+)"
+      ],
+      "depNameTemplate": "registry1.dso.mil/ironbank/neuvector/neuvector/manager",
+      "datasourceTemplate": "docker"
+    },
+
   ],
   "hostRules": [
     {
