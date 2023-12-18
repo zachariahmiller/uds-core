@@ -30,7 +30,7 @@
       "matchStrings": [
         "# renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*(?<currentValue>.*)\\s",
         "# renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*['\"](?<currentValue>.*)['\"]\\s",
-        "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\s]+)",
+        "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>[^\n]+)\n.*?uds@(?<currentValue>[^\\s]+)",
         "// renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*(?<currentValue>.*)\\s",
         "// renovate: datasource=github-tags depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version:\\s*['\"](?<currentValue>.*)['\"]\\s"
       ],
