@@ -164,9 +164,14 @@
       "groupName": "zarf",
       "commitMessageTopic": "zarf"
     },
+    {
+      "matchPackageNames": ["defenseunicorns/uds-cli"],
+      "groupName": "uds",
+      "commitMessageTopic": "uds"
+    },
     { 
       "matchFileNames": [".github/**"],
-      "excludePackageNames": ["defenseunicorns/zarf"],
+      "excludePackageNames": ["defenseunicorns/zarf","defenseunicorns/uds-cli"],
       "groupName": "githubactions",
       "commitMessageTopic": "githubactions",
       "pinDigests": true
