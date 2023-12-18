@@ -9,7 +9,7 @@ metadata:
 zarf-packages:
   - name: uds-k3d-dev
     repository: ghcr.io/defenseunicorns/packages/uds-k3d
-    # renovate: datasource=github-tags depName=defenseunicorns/uds-k3d versioning=semver extractVersion="^v(?<version>.*)$"
+    # renovate: datasource=github-tags depName=defenseunicorns/uds-k3d versioning=loose
     ref: 0.2.0
     overrides:
       uds-dev-stack:
