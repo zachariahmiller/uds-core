@@ -33,7 +33,7 @@
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "datasourceTemplate": "github-tags",
-      "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}(?<version>.*){{/if}}"
+      "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}null{{/if}}"
     },
     {
       "depNameTemplate": "defenseunicorns/uds-cli",
