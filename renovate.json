@@ -169,6 +169,12 @@
       "groupName": "uds",
       "commitMessageTopic": "uds"
     },
+    {
+      "matchPackageNames": ["defenseunicorns/uds-k3d"],
+      "groupName": "uds-k3d",
+      "commitMessageTopic": "uds-k3d",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
     { 
       "matchFileNames": [".github/**"],
       "excludePackageNames": ["defenseunicorns/zarf","defenseunicorns/uds-cli"],
