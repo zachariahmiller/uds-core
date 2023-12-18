@@ -31,7 +31,8 @@
         "# renovate: datasource=github-tags depName=(?<depName>[^ ]+) versioning=(?<versioning>.*?)( extractVersion=(?<extractVersion>.*?))?\n.*?(?:version:|ref:) (?<currentValue>[^\\s]+)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
-      "datasourceTemplate": "github-tags"
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}null{{/if}}"
     },
     {
       "depNameTemplate": "defenseunicorns/uds-cli",
