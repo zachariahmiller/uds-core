@@ -43,7 +43,7 @@ jobs:
   test:
     runs-on: "${{ inputs.package == 'all' && 'uds-ubuntu-big-boy-8-core' || 'ubuntu-latest'}}"
     timeout-minutes: 30
-    name: "Test ${{ inputs.test_type }} ${{ inputs.package }} ${{ inputs.flavor }}"
+    name: "Test ${{ inputs.test_type }} ${{ inputs.flavor }} (${{ inputs.package }})"
     env:
       UDS_PKG: ${{ inputs.package }}
 
