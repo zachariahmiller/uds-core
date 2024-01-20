@@ -8,6 +8,14 @@ on:
         type: string
         description: "The name of the source package to test"
         required: true
+      test_type:
+        type: string
+        description: "The name of the source package to test"
+        required: true
+      flavor:
+        type: string
+        description: "The name of the source package to test"
+        required: true
   # Triggered by pull-request-conditionals.yaml
   workflow_call:
     inputs:
@@ -15,7 +23,14 @@ on:
         type: string
         description: "The name of the source package to test"
         required: true
-
+      test_type:
+        type: string
+        description: "The name of the source package to test"
+        required: true
+      flavor:
+        type: string
+        description: "The name of the source package to test"
+        required: true
 # Abort prior jobs in the same workflow / PR
 concurrency:
   group: test-${{ github.ref }}-${{ inputs.package }}
@@ -40,11 +55,15 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Test a single source package
-        if: ${{ inputs.package != 'all' }}
+        if: ${{ inputs.package != 'all' && inputs.test_type != 'upgrade' }}
         run: uds run test-single-package
 
       - name: Test UDS Core
-        if: ${{ inputs.package == 'all' }}
+        if: ${{ inputs.package == 'all' && inputs.test_type != 'upgrade' }}
+        run: uds run test-uds-core
+
+      - name: Test UDS Core Upgrade
+        if: ${{ inputs.package == 'all' && inputs.test_type = 'upgrade' }}
         run: uds run test-uds-core
 
       - name: Save logs
