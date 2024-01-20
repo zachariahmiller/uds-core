@@ -46,6 +46,15 @@ jobs:
         package: ${{ fromJSON(needs.check-paths.outputs.packages) }}
         flavor: [upstream, registry1]
         test_type: [install, upgrade]
+        exclude:
+          - test_type: upgrade
+            flavor: upstream
+          - test_type: upgrade
+            flavor: registry1
+        include:
+          - test_type: upgrade
+            package: all
+
     uses: ./.github/workflows/test.yaml
     with:
       package: ${{ matrix.package }}
