@@ -23,6 +23,7 @@ components:
     import:
       path: flavors
 
+
   - name: istio-config
     required: true
     manifests:

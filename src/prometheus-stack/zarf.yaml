@@ -17,6 +17,7 @@ components:
         valuesFiles:
           - "values/crd-values.yaml"
 
+
   - name: kube-prometheus-stack
     required: true
     description: "Install kube-prometheus-stack using the helm chart https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack"
