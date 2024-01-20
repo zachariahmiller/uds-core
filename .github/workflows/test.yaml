@@ -33,7 +33,7 @@ on:
         required: true
 # Abort prior jobs in the same workflow / PR
 concurrency:
-  group: test-${{ github.ref }}-${{ inputs.package }}
+  group: test-${{ github.ref }}-${{ inputs.package }}-${{ inputs.flavor }}-${{ inputs.test_type }}
   cancel-in-progress: true
 
 permissions:

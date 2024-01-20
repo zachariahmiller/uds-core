@@ -3,6 +3,8 @@ name: Filter
 # This workflow is triggered on pull requests to the main branch.
 on:
   pull_request:
+    branches: [main]
+    types: [opened, edited, synchronize]
 
 
 # Permissions for the GITHUB_TOKEN used by the workflow.
@@ -44,7 +46,6 @@ jobs:
         package: ${{ fromJSON(needs.check-paths.outputs.packages) }}
         flavor: [upstream, registry1]
         test_type: [install, upgrade]
-
     uses: ./.github/workflows/test.yaml
     with:
       package: ${{ matrix.package }}
