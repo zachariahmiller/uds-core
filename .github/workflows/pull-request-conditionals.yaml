@@ -3,10 +3,7 @@ name: Filter
 # This workflow is triggered on pull requests to the main branch.
 on:
   pull_request:
-    paths:
-      - ".github/**"
-      - "src/**"
-      - "tasks/**"
+
 
 # Permissions for the GITHUB_TOKEN used by the workflow.
 permissions:
