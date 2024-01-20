@@ -63,7 +63,7 @@ jobs:
         run: uds run test-uds-core
 
       - name: Test UDS Core Upgrade
-        if: ${{ inputs.package == 'all' && inputs.test_type = 'upgrade' }}
+        if: ${{ inputs.package == 'all' && inputs.test_type == 'upgrade' }}
         run: uds run test-uds-core
 
       - name: Save logs
