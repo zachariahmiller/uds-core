@@ -95,7 +95,7 @@
     {
       "fileMatch": ["\\.*\\.ya?ml$"],
       "matchStrings": [
-        "registry: (?<registryUrl>.+)\\s+tag:\\s+(?<currentValue>.+).*|  image:.*\\s    repository: (?<depName>.+)"
+        "registry: (?<registryUrl>.+)\\s+tag:\\s+(?<currentValue>.+).*|image:.*\\s *repository: (?<depName>.+)"
       ],
 
       "datasourceTemplate": "docker"
