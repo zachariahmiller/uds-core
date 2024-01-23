@@ -18,7 +18,8 @@
   "separateMajorMinor": false,
   "suppressNotifications": ["prIgnoreNotification"],
   "helm-values": {
-    "fileMatch": ["\\.*\\.ya?ml$"]
+    "fileMatch": ["\\.*\\.ya?ml$"],
+    "ignorePaths": ["src/neuvector/values/registry1-\\.*\\.ya?ml$"]
   },
   "kubernetes": {
     "fileMatch": ["\\.*\\.ya?ml$"]
