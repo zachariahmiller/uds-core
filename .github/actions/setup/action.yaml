@@ -23,7 +23,7 @@ runs:
         download-init-package: true
 
     - name: Use Node.js latest
-      uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
+      uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v4.0.4
       with:
         node-version: 20
 
@@ -40,14 +40,14 @@ runs:
       run: brew install defenseunicorns/tap/uds@0.6.1
 
     - name: Login to GHCR
-      uses: docker/login-action@v3
+      uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # v3
       with:
         registry: ghcr.io
         username: dummy
         password: ${{ inputs.gh_token }}
 
     # Retries intermittent registry1 login action
-    - uses: Wandalen/wretry.action@v1
+    - uses: Wandalen/wretry.action@6feedb7dedadeb826de0f45ff482b53b379a7844 # v3
       with:
         attempt_limit: 3
         action: docker/login-action@v3
