@@ -2,10 +2,10 @@ loki:
   image:
     registry: docker.io
     repository: grafana/loki
-    tag: 2.9.2
+    tag: 3.5.0
 
 gateway:
   image:
     registry: docker.io
     repository: nginxinc/nginx-unprivileged
-    tag: 1.24-alpine
+    tag: 1.28-alpine
